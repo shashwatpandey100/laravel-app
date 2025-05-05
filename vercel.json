@@ -19,11 +19,15 @@
             "dest": "/public/build/$1"
         },
         {
+            "src": "/(css|js|images|fonts|favicon.ico|robots.txt|manifest.json)(.*)",
+            "dest": "/public/$1$2"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
     ],
-    "buildCommand": "npm install && npm run build",
+    "buildCommand": "npm install && npm run vercel-build",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
