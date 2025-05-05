@@ -19,7 +19,7 @@ export default function Hostel() {
                         style={{
                             backgroundImage: `url(${facility?.thumbnail})`,
                         }}
-                        className="h-[240px] w-full bg-cover bg-center bg-no-repeat sm:h-[300px] md:h-[440px]"
+                        className="bg- h-[240px] w-full bg-cover bg-center bg-no-repeat sm:h-[300px] md:h-[440px]"
                     ></div>
 
                     <div className="container mx-auto flex flex-col-reverse justify-center gap-4 px-4 py-4 md:py-10 lg:flex-row lg:gap-16 lg:py-16">
