@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('thumbnail')->nullable();
             $table->string('image')->nullable();
             $table->string('icon')->nullable();
+            $table->string('slug');
             $table->timestamps();
         });
     }

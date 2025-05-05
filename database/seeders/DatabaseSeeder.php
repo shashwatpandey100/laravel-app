@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminUserSeeder::class,
             AgencySeeder::class,
+            FacilitySeeder::class,
+            GallerySeeder::class,
         ]);
 
         $hostels = Hostel::factory()->count(5)->create();

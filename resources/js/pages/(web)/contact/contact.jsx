@@ -18,7 +18,7 @@ export default function Contact() {
                         style={{
                             backgroundImage: `url(https://raghumahostels.com/build/assets/contact-banner-DMli9PSL.jpeg)`,
                         }}
-                        className="h-[240px] w-full bg-cover bg-center bg-no-repeat sm:h-[300px] md:h-[440px]"
+                        className="h-[200px] w-full bg-cover bg-center bg-no-repeat sm:h-[300px] md:h-[440px]"
                     ></div>
                     <h2
                         style={{
@@ -29,7 +29,7 @@ export default function Contact() {
                         Get In Touch
                     </h2>
                     <p className="text-center font-[500]">Book your stay today and elevate your lifestyle to new heights</p>
-                    <div className="container mx-auto flex gap-12 pt-6 pb-20">
+                    <div className="container mx-auto flex flex-col gap-12 pt-6 pb-20 lg:flex-row">
                         <ContactModule />
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1753.6773568580404!2d77.48169503498126!3d28.468862375754508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea08950593b7%3A0x2ba17f028de339d1!2s40B%2C%20Knowledge%20Park%20III%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201310!5e0!3m2!1sen!2sin!4v1713006598482!5m2!1sen!2sin"
@@ -37,7 +37,7 @@ export default function Contact() {
                             allowfullscreen=""
                             referrerpolicy="no-referrer-when-downgrade"
                             width="100%"
-                            className="mt-8 h-[475px] rounded-lg shadow-[0_5px_10px_#bababa]"
+                            className="mt-8 h-[475px] shadow-[0_5px_10px_#bababa] lg:rounded-lg"
                         ></iframe>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const ContactModule = () => {
 
     return (
         <div>
-            <div className="container mx-auto h-[475px] px-4 pb-20">
+            <div className="container mx-auto mb-16 h-[475px] px-4 pb-20 lg:mb-0">
                 <div className="mt-8 flex h-max w-full justify-center gap-8">
                     <form onSubmit={handleSubmit} className="w-[700px] rounded-lg border bg-white p-8 shadow-[0_5px_10px_#bababa]" method="POST">
                         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
