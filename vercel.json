@@ -1,19 +1,38 @@
 {
     "version": 2,
-    "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": {
+            "runtime": "vercel-php@0.6.0"
+        }
     },
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "public"
+            }
+        },
+        {
+            "src": "api/index.php",
+            "use": "@vercel/php"
+        }
+    ],
     "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/build/$1"
+        },
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
     ],
+    "buildCommand": "npm install && npm run build",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://hostel-qsmuqlypl-shashwatpandey100s-projects.vercel.app/",
+        "APP_URL": "https://hostel-qsmuqlypl-shashwatpandey100s-projects.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",

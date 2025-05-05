@@ -26,4 +26,12 @@ export default defineConfig({
             'ziggy-js': resolve(__dirname, 'vendor/tightenco/ziggy'),
         },
     },
+    build: {
+        outDir: 'public/build',
+        emptyOutDir: true,
+        manifest: true,
+        rollupOptions: {
+            input: ['resources/css/app.css', 'resources/js/app.jsx'],
+        },
+    },
 });
